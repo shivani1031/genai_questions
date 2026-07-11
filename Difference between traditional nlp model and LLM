@@ -1,0 +1,86 @@
+Difference between traditional nlp model and LLM
+
+Traditional NLP primarily relies on manually engineered features and task-specific algorithms. Techniques like TF-IDF, Bag of Words, n-grams, and classical machine learning models such as Naive Bayes, SVM, or Logistic Regression are commonly used. These methods focus on word occurrences or statistical patterns rather than truly understanding the meaning of the text.
+
+For example, TF-IDF represents documents based on how important a word is within a document compared to the entire corpus. However, it treats words independently and cannot capture context or semantic relationships.
+
+Large Language Models, on the other hand, are deep learning models based on the Transformer architecture. Instead of relying on manually designed features, they learn contextual representations from billions of words during pre-training. This enables them to understand the meaning of a word based on its surrounding context.
+
+For instance, in the sentence "I went to the bank to deposit money" and "The boat reached the bank of the river", a traditional TF-IDF representation treats the word bank the same, whereas an LLM understands that the meanings are different because of the surrounding words.
+
+Another major difference is that traditional NLP models are usually built for a single task such as sentiment analysis or spam detection, while LLMs can perform many tasks like question answering, summarization, translation, code generation, and reasoning using the same model with only different prompts.
+
+
+| Traditional NLP                       | LLM                                     |
+| ------------------------------------- | --------------------------------------- |
+| Rule-based or classical ML            | Transformer-based deep learning         |
+| Needs manual feature engineering      | Learns features automatically           |
+| Uses TF-IDF, BoW, n-grams             | Uses embeddings and attention           |
+| Little or no contextual understanding | Strong contextual understanding         |
+| Usually single-task models            | One model can perform many tasks        |
+| Limited generalization                | Strong generalization                   |
+| Trained on relatively small datasets  | Trained on billions/trillions of tokens |
+
+
+
+Many candidates say:
+
+"LLMs understand language."
+
+A more accurate statement is:
+
+LLMs learn statistical patterns and contextual relationships in language, enabling them to generate responses that reflect an understanding of meaning. 
+They do not possess human consciousness or true comprehension.
+
+Interviewers appreciate this distinction.
+
+Follow up questions:
+Q1. Why can't TF-IDF understand context?
+
+Answer:
+
+Because TF-IDF assigns a weight to each word independently. It ignores word order and surrounding words, so it cannot distinguish different meanings of the same word.
+
+Q2. Why are embeddings better than TF-IDF?
+
+Answer:
+
+Embeddings map words or sentences into a dense vector space where semantically similar concepts are close together. Unlike TF-IDF, embeddings capture relationships such as synonyms and contextual similarity.
+
+Q3. Do LLMs use TF-IDF internally?
+
+Answer:
+
+No. LLMs learn dense vector representations (embeddings) during training. They do not rely on TF-IDF for language understanding.
+
+Q4. If LLMs understand context, why do we still need RAG?
+
+Answer:
+
+Because LLMs only know what they learned during training and may not have access to recent or organization-specific information. Retrieval-Augmented Generation (RAG) retrieves relevant external documents and provides them as context, improving factual accuracy and reducing hallucinations.
+
+Q5. What makes LLMs understand context?
+
+Answer:
+
+The Transformer architecture, especially the self-attention mechanism, allows every token to attend to other relevant tokens in the sequence. This helps the model determine the appropriate meaning of a word based on its context.
+
+Q6. Is predicting the next word enough to create intelligence?
+
+Answer:
+
+Next-token prediction is the training objective, but during training on massive datasets, the model learns grammar, facts, reasoning patterns, and semantic relationships. The next-token objective leads to rich internal representations that support many downstream tasks.
+
+Common Interview Mistakes
+
+❌ "TF-IDF is an NLP model."
+
+✅ "TF-IDF is a text vectorization or feature extraction technique."
+
+❌ "Semantic search predicts the next word."
+
+✅ "Semantic search retrieves information based on meaning, typically using embeddings."
+
+❌ "LLMs understand language exactly like humans."
+
+✅ "LLMs model contextual relationships and generate human-like responses, but their understanding is based on learned statistical patterns rather than human cognition."
