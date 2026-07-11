@@ -4,11 +4,15 @@ Traditional NLP primarily relies on manually engineered features and task-specif
 
 For example, TF-IDF represents documents based on how important a word is within a document compared to the entire corpus. However, it treats words independently and cannot capture context or semantic relationships.
 
-Large Language Models, on the other hand, are deep learning models based on the Transformer architecture. Instead of relying on manually designed features, they learn contextual representations from billions of words during pre-training. This enables them to understand the meaning of a word based on its surrounding context.
+Large Language Models, on the other hand, are deep learning models based on the Transformer architecture. 
+Instead of relying on manually designed features, they learn contextual representations from billions of words during pre-training. 
+This enables them to understand the meaning of a word based on its surrounding context.
 
-For instance, in the sentence "I went to the bank to deposit money" and "The boat reached the bank of the river", a traditional TF-IDF representation treats the word bank the same, whereas an LLM understands that the meanings are different because of the surrounding words.
+For instance, in the sentence "I went to the bank to deposit money" and "The boat reached the bank of the river", 
+a traditional TF-IDF representation treats the word bank the same, whereas an LLM understands that the meanings are different because of the surrounding words.
 
-Another major difference is that traditional NLP models are usually built for a single task such as sentiment analysis or spam detection, while LLMs can perform many tasks like question answering, summarization, translation, code generation, and reasoning using the same model with only different prompts.
+Another major difference is that traditional NLP models are usually built for a single task such as sentiment analysis or spam detection, 
+while LLMs can perform many tasks like question answering, summarization, translation, code generation, and reasoning using the same model with only different prompts.
 
 
 | Traditional NLP                       | LLM                                     |
