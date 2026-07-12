@@ -1,0 +1,106 @@
+What is the difference between perplexity and accuracy as evaluation metrics for language models? 
+first explain what is perplexity and accuracy then tell the difference
+
+What is Accuracy?
+
+Accuracy is the easiest metric to understand.
+
+Definition
+
+Accuracy measures how many predictions the model got exactly correct.
+
+Formula:
+
+Accuracy=
+Total Predictions /
+Correct Predictions
+Example 1
+
+Suppose an LLM predicts the next word.
+
+Sentence:
+
+I drink ___
+
+Correct word:
+
+coffee
+
+Model predicts:
+
+coffee
+
+✅ Correct
+
+
+
+
+
+
+
+
+
+Step 2: What is Perplexity?
+
+Perplexity is the most common training metric for language models.
+
+Instead of asking
+
+"Did the model predict the correct word?"
+
+it asks
+
+"How confident was the model about the correct next word?"
+
+Intuition
+
+Suppose I ask you
+
+Finish this sentence:
+
+I drink ______
+
+You think
+
+Word	Probability
+coffee	0.80
+tea	0.15
+water	0.03
+laptop	0.0001
+
+You're very confident.
+
+This should give
+
+Low Perplexity
+
+Now suppose the probabilities are
+
+Word	Probability
+coffee	0.10
+tea	0.10
+car	0.10
+tree	0.10
+phone	0.10
+...	...
+
+You're confused.
+
+The model is uncertain.
+
+This gives
+
+High Perplexity.
+
+
+
+
+Difference Between Accuracy and Perplexity
+| Accuracy                                           | Perplexity                                               |
+| -------------------------------------------------- | -------------------------------------------------------- |
+| Measures exact correctness                         | Measures confidence in predicting the correct next token |
+| Higher is better                                   | Lower is better                                          |
+| Used for classification and exact-match evaluation | Used to evaluate language models during training         |
+| Ignores prediction probabilities                   | Uses the full probability distribution                   |
+| 100% = perfect                                     | 1 = perfect (theoretical minimum)                        |
+
