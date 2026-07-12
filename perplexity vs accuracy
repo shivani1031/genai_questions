@@ -104,3 +104,43 @@ Difference Between Accuracy and Perplexity
 | Ignores prediction probabilities                   | Uses the full probability distribution                   |
 | 100% = perfect                                     | 1 = perfect (theoretical minimum)                        |
 
+
+
+
+Interview Follow-up Questions
+Q1. Is lower perplexity always better?
+
+Answer:
+
+Generally, yes, on the same dataset. A lower perplexity means the model assigns higher probability to the correct tokens. 
+However, a lower perplexity does not always translate to better performance on downstream tasks such as reasoning, coding, or instruction following.
+
+Q2. Can two models have the same accuracy but different perplexity?
+
+Answer:
+
+Yes.
+
+Both may predict the correct token, but one model may assign 95% probability to it while the other assigns only 55%. 
+Their accuracy is identical, but the first model has lower perplexity because it is more confident.
+
+Q3. Why isn't accuracy enough for LLMs?
+
+Answer:
+
+Language generation is probabilistic. There can be multiple valid next tokens or multiple acceptable responses. 
+Accuracy only checks whether the top prediction exactly matches the reference, 
+while perplexity evaluates how well the model models the probability distribution over possible next tokens.
+
+Q4. Can a model have low perplexity but still produce poor chat responses?
+
+Answer:
+
+Yes.
+
+Perplexity measures next-token prediction quality, not whether the model is helpful, safe, or aligned with user preferences. 
+That's one reason why techniques such as instruction tuning, RLHF, and DPO are used after pretraining.
+
+
+
+
